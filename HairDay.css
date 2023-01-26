@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*---------------------------------------------
+--------------- Header------------------------
+---------------------------------------------- */
+
+/*-------------- NavBar------------------------------------------ */
+header {
+    background-image: url(header1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    /* backdrop-filter: ; */
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 8vh;
+    /* margin: 10px; */
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+nav>h1 {
+    width: 35%;
+    align-self: center;
+    /* text-align: center; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-left: 20px;
+    color: rgb(232, 230, 227);
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, rgb(202, 120, 62), rgb(202, 120, 62) 50%, rgb(232, 230, 227)50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+nav>h1:hover {
+
+    background-position: 0 100%;
+}
+
+nav>ul {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    /* gap: 3vw; */
+    margin-right: 40px;
+    /* padding-top: 4px; */
+    list-style: none;
+}
+
+nav>ul>li {
+    gap: 4vw;
+    font-size: 0.5rem;
+    align-self: center;
+    padding: 0px 5px;
+}
+
+li>a {
+    position: relative;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    gap: 10px;
+    text-decoration: none;
+    color: rgb(232, 230, 227);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+li>a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    background-color: rgb(202, 120, 62);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+li>a:hover::before {
+    color: rgb(202, 120, 62);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+/* --------------Image And text in the image---------- */
+
+
+header>div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    /* margin: 17% 15%; */
+    top: 120px;
+    left: 100px;
+    color: white;
+}
+
+header>div>h2 {
+    margin: 2% 10%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: rgb(202, 120, 62);
+}
+
+header>div>h3 {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+
+}
+
+header>div>h3>i {
+    height: 5px;
+    width: 5px;
+    margin: 3px;
+    background-color: rgb(202, 120, 62);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+header>div>p {
+
+    margin: 1% 30%;
+}
+
+/* ----------------------------------------------------
+-------------------MAIN--------------------------------
+------------------------------------------------------- */
+main {
+    perspective: 600px;
+}
+
+MAIN .cardes {
+    display: grid;
+    /* justify-content: ; */
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 51vh;
+    background-color: rgb(24, 26, 27);
+    text-align: center;
+    color: white;
+    backface-visibility: hidden;
+}
+
+.cardes div:nth-child(even) {
+    /* height: 100%; */
+    background-color: rgb(0, 0, 0);
+}
+
+.cardes>div {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform-origin: right center;
+    /* backface-visibility: hidden; */
+}
+
+.cardes>div:hover {
+    width: 100%;
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.cardes .front {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    gap: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    flex-wrap: wrap;
+}
+
+.cardes>div:before {
+    content: " ";
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border: 1px solid;
+    top: 25px;
+    right: 7%;
+    /* background-color: white; */
+
+}
+
+.cardes .front>h2 {
+    width: auto;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 3rem;
+    padding-bottom: 30px;
+    color: rgb(202, 120, 62);
+}
+
+.cardes .front>h3 {
+    width: 10px;
+    letter-spacing: 2px;
+    width: auto;
+    font-size: 2rem;
+
+
+}
+
+.front>p>i {
+    height: 5px;
+    width: 5px;
+    margin: 2px;
+    background-color: rgb(202, 120, 62);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cardes .back {
+    background-color: rgb(24, 26, 27);
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+
+.cardes>div .back>p {
+    text-align: center;
+}
+
+/* -------------Hair Cut pricing ------------- */
+.AboutSec {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    background-image: url(aboutback.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.AboutSec>div {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0%;
+    padding-top: 100px;
+}
+
+
+.about {
+    position: relative;
+    top: -10%;
+    padding-left: 20px;
+    width: 100%;
+    height: 30vh;
+    /* border: 2px white solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about>h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgb(202, 120, 62);
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.about>p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about>a {
+    position: relative;
+    padding-top: 50px;
+    text-decoration: none;
+    color: rgb(202, 120, 62);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#aboutus::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    color: rgb(202, 120, 62);
+    background-color: rgb(202, 120, 62);
+    transform-origin: bottom left;
+    /* transition: transform 0.3s ease-out; */
+}
+
+#aboutus:hover::before {
+    /* color: rgb(202, 120, 62);
+    transform: scaleX(0);
+    transform-origin: bottom right; */
+    animation: tra 0.5s ease-in;
+}
+
+@keyframes tra {
+    10% {
+        transform: scaleX(0.8);
+        transform-origin: bottom right;
+    }
+
+    20% {
+        transform: scaleX(0.5);
+        transform-origin: bottom right;
+    }
+
+    30% {
+        color: rgb(202, 120, 62);
+        transform: scaleX(0.2);
+        transform-origin: bottom right;
+    }
+
+    50% {
+        transform-origin: bottom right;
+        transform: scaleX(0);
+    }
+
+    60% {
+        transform-origin: bottom left;
+        transform: scaleX(0.3);
+    }
+
+    80% {
+        transform-origin: bottom left;
+        transform: scaleX(0.7);
+    }
+
+    100% {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+    }
+}
+
+.aboutimages {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+}
+
+#aboutimgone {
+    position: relative;
+    margin-bottom: 200px;
+    z-index: 0;
+
+}
+
+#aboutimgtwo {
+    position: relative;
+    right: 50px;
+    top: 40px;
+}
+
+/* -------------------------------------------------
+-----------price list-------------------------
+---------------------------------------------------- */
+.prices {
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(28, 30, 31);
+    color: rgb(232, 230, 227);
+}
+
+.letsdotit {
+    overflow: hidden;
+    width: 70%;
+    position: relative;
+    font-size: 7em;
+    top: 150px;
+    left: 50px;
+    z-index: 0;
+    color: rgb(202, 120, 62);
+    opacity: 0.1;
+    font-family: 'Dancing Script', cursive;
+}
+
+.priceslist {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 0px;
+    margin-bottom: 50px;
+}
+
+.priceslist>h1 {
+    display: block;
+    width: 20%;
+    height: 20vh;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-right: 5px;
+
+}
+
+.priceslist>ul {
+    list-style: none;
+    padding-left: 0px;
+
+}
+
+.priceslist>ul>li {
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+
+.priceslist>ul>li>div>p {
+    padding-top: 3px;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+
+.priceslist>ul>li>div>h3 {
+    padding-top: 5px;
+    font-size: 0.9em;
+}
+
+.priceslist>ul>li>i {
+    position: relative;
+    width: 90%;
+    height: 1px;
+    color: white;
+    margin-left: 2px;
+    background-color: white;
+    top: 15px;
+    opacity: 0.1;
+}
+
+.detials {
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    /* padding-left: 50px; */
+    color: rgb(202, 120, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50px;
+    animation: logofooter 5s ease-in-out;
+    animation-iteration-count: infinite;
+    position: relative;
+    max-width: 100%;
+}
+
+.logo::after {
+    position: absolute;
+    content: "";
+    width: 190px;
+    background-color: white;
+    height: 1px;
+    top: 130px;
+    left: 12px;
+
+}
+
+@keyframes logofooter {
+    50% {
+        transform: translate(2px, 5px);
+    }
+}
+
+.logo>h1 {
+    width: 100%;
+    font-size: 8rem;
+}
+
+.logo>p {
+    font-size: 1rem;
+    font-weight: 400;
+    transform: rotate(90deg);
+    padding: 0px;
+    margin: 0px;
+    width: 120%;
+    height: 100%;
+    position: relative;
+    left: -40px;
+}
+
+.logo :last-child {
+    position: relative;
+    right: 80px;
+    /* font-size:500px ; */
+}
+
+.contact {
+    text-align: left;
+    width: 25%;
+    position: relative;
+}
+
+.contact>h3 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 70%;
+}
+
+.contact>p {
+    width: 70%;
+    padding-bottom: 3px;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.contact>div {
+    width: 70%;
+    /* text-align: center; */
+    padding-left: 30px;
+    padding-top: 10px;
+
+}
+
+.contact>div>a {
+    /* padding-left: 5px; */
+    color: aliceblue;
+    font-size: 12px;
+
+}
+
+.contact>div>a:first-child::after {
+    opacity: 0.5;
+    padding: 0 10px;
+    content: "|";
+
+}
+
+.contact>div>a:nth-child(2)::after {
+    opacity: 0.5;
+    padding: 0 10px;
+    content: "|";
+
+}
+
+.contact>div>a:nth-child(3)::after {
+    opacity: 0.5;
+    padding: 0 10px;
+    content: "|";
+
+}
+
+.contact>div>a>i:hover {
+    color: rgb(202, 120, 62);
+
+}
+
+.footerimg {
+    width: 30%;
+    text-align: center;
+}
+
+.footerimg>img {
+    /* padding: 10px 10px; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.footerimg>h3 {
+    display: flex;
+    justify-content: left;
+    /* text-align: center; */
+    margin-bottom: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 70%;
+}
+
+.footercopy {
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(28, 30, 31);
+    color: rgb(232, 230, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footercopy>p {
+    font-size: 0.8rem;
+    font-weight: 200;
+
+}
+
+.footercopy>p>a {
+    text-decoration: none;
+    color: rgb(232, 230, 227);
+}
