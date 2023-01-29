@@ -146,8 +146,8 @@ header>div {
     width: 50%;
     position: relative;
     /* margin: 17% 15%; */
-    top: 120px;
-    left: 100px;
+    top: 40%;
+    left: 75px;
     color: white;
 }
 
@@ -687,7 +687,7 @@ footer {
     color: rgb(232, 230, 227);
 }
 
-@media screen and (max-width:570px) {
+@media screen and (max-width:980px) {
     nav {
         background-color: black;
     }
@@ -722,7 +722,7 @@ footer {
     .sidebtn::before,
     .sidebtn::after {
         position: relative;
-        left: -20px;
+        left: -50px;
         top: 5px;
         content: "";
         display: block;
@@ -815,8 +815,31 @@ footer {
         padding-top: 120px;
         opacity: 0.5;
         transition: 0.4;
+    }
 
+    nav>h1 {
+        font-size: 30px;
+        margin-left: 40px;
 
+    }
+
+    header>div {
+        width: 92%;
+    }
+
+    header>div>h2 {
+        margin: 2% 5%;
+        font-size: 6rem;
+    }
+
+    header>div>h3 {
+
+        font-size: 2.5rem;
+    }
+
+    header>div>p {
+        margin: 2% 20%;
+        font-size: 1.5rem;
     }
 
 }
