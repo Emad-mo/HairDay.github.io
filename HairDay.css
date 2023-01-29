@@ -197,6 +197,7 @@ MAIN .cardes {
     text-align: center;
     color: white;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .cardes div:nth-child(even) {
@@ -230,6 +231,7 @@ MAIN .cardes {
     gap: 20px;
     position: absolute;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     flex-wrap: wrap;
 }
 
@@ -282,6 +284,7 @@ MAIN .cardes {
     width: 100%;
     text-align: center;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transform: rotateY(180deg);
 }
 
@@ -752,12 +755,15 @@ footer {
         z-index: 98;
         background-color: black;
         padding-top: 120px;
-        transition: 0.5s;
+        transition: 0.4s;
+
 
     }
 
     .mobilenav.is-activ {
         left: 50%;
+        backdrop-filter: brightness(20%);
+        -webkit-backdrop-filter: brightness(20%);
     }
 
     .mobilenav>a {
@@ -797,10 +803,20 @@ footer {
 
     }
 
-    .menu-open {
-        background-color: rgba(0, 0, 0, 0.3)
+    .bluree.is-activ {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 95;
+        background-color: black;
+        padding-top: 120px;
+        opacity: 0.5;
+        transition: 0.4;
+
+
     }
-
-
 
 }

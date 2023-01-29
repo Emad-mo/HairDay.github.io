@@ -2,8 +2,7 @@ let navbar = document.getElementById("navbar")
 let sidebar = document.getElementById("sidebar")
 let arrow = document.getElementById("arrobtn")
 let mobilenav = document.getElementById("navv")
-const container = document.querySelector('body');
-console.log(container)
+let bluree = document.getElementById("bluree")
 // navbar.addEventListener("s")
 window.onscroll = function () {
     {
@@ -35,5 +34,13 @@ arrow.onclick = function () {
 sidebar.onclick = function () {
     sidebar.classList.toggle("is-activ")
     mobilenav.classList.toggle("is-activ")
+    bluree.classList.toggle("is-activ")
 
+}
+bluree.onclick = function () {
+    if (bluree.classList.contains("is-activ")) {
+        mobilenav.classList.remove("is-activ")
+        bluree.classList.remove("is-activ")
+        sidebar.classList.toggle("is-activ")
+    }
 }
