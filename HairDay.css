@@ -23,10 +23,24 @@ header {
 
 }
 
+#arrobtn {
+    display: none;
+    position: fixed;
+    font-size: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgb(202, 120, 62);
+    bottom: 3%;
+    right: 1.5%;
+    z-index: 10;
+    cursor: pointer;
+}
+
 nav {
-    position: sticky;
+
+    position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
     height: 8vh;
     /* margin: 10px; */
@@ -36,6 +50,7 @@ nav {
     text-align: center;
 
 }
+
 
 nav>h1 {
     width: 35%;
@@ -77,6 +92,16 @@ nav>ul>li {
     font-size: 0.5rem;
     align-self: center;
     padding: 0px 5px;
+
+}
+
+.sidebtn {
+    display: none;
+    ;
+}
+
+.mobilenav>a {
+    display: none;
 }
 
 li>a {
@@ -440,12 +465,13 @@ MAIN .cardes {
 }
 
 .priceslist>h1 {
+    text-align: end;
     display: block;
-    width: 20%;
-    height: 20vh;
-    font-size: 30px;
+    width: 15%;
+    height: 10vh;
+    font-size: 35px;
     font-weight: bolder;
-    padding-right: 5px;
+    padding-right: 12px;
 
 }
 
@@ -463,13 +489,13 @@ MAIN .cardes {
 
 .priceslist>ul>li>div>p {
     padding-top: 3px;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 100;
 }
 
 .priceslist>ul>li>div>h3 {
-    padding-top: 5px;
-    font-size: 0.9em;
+    padding-top: 12px;
+    font-size: 1.1em;
 }
 
 .priceslist>ul>li>i {
@@ -481,6 +507,12 @@ MAIN .cardes {
     background-color: white;
     top: 15px;
     opacity: 0.1;
+}
+
+/* -----------------footer-----------------------
+------------------------------------------------- */
+footer {
+    width: 100%;
 }
 
 .detials {
@@ -551,6 +583,7 @@ MAIN .cardes {
     text-align: left;
     width: 25%;
     position: relative;
+    left: 50px;
 }
 
 .contact>h3 {
@@ -649,4 +682,125 @@ MAIN .cardes {
 .footercopy>p>a {
     text-decoration: none;
     color: rgb(232, 230, 227);
+}
+
+@media screen and (max-width:570px) {
+    nav {
+        background-color: black;
+    }
+
+    nav>ul>li :not(.not) {
+        display: none;
+        padding: 0px;
+
+    }
+
+    nav>ul {
+        margin: 0px;
+    }
+
+    nav>h1 {
+        font-size: 15px;
+    }
+
+    .sidebtn {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        width: 30px;
+        /* height: 35px; */
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
+
+    .sidebtn .humbar,
+    .sidebtn::before,
+    .sidebtn::after {
+        position: relative;
+        left: -20px;
+        top: 5px;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        margin: 6px 0px;
+        transition: 0.4s;
+    }
+
+    .sidebtn.is-activ::before {
+        transform: rotate(-45deg) translate(-6px, 2px);
+    }
+
+    .sidebtn.is-activ::after {
+        transform: rotate(45deg) translate(-9px, -5px);
+    }
+
+    .sidebtn.is-activ .humbar {
+        opacity: 0;
+    }
+
+    .mobilenav {
+        display: block;
+        position: fixed;
+        left: 100%;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        z-index: 98;
+        background-color: black;
+        padding-top: 120px;
+        transition: 0.5s;
+
+    }
+
+    .mobilenav.is-activ {
+        left: 50%;
+    }
+
+    .mobilenav>a {
+
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px;
+        letter-spacing: 2px;
+        position: relative;
+        gap: 10px;
+        color: rgb(232, 230, 227);
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+
+
+    }
+
+    .mobilenav>a::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        transform: scaleX(0);
+        height: 1.5px;
+        bottom: 8px;
+        left: 25%;
+        background-color: rgb(202, 120, 62);
+        transform-origin: bottom left;
+        transition: transform 0.3s ease-out;
+    }
+
+    .mobilenav>a:hover::before {
+        color: rgb(202, 120, 62);
+        transform: scaleX(1);
+        transform-origin: bottom left;
+
+    }
+
+    .menu-open {
+        background-color: rgba(0, 0, 0, 0.3)
+    }
+
+
+
 }

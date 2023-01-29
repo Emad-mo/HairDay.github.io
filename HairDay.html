@@ -28,10 +28,10 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header>
         <!-- <img src="header.jpg" width="100%" alt=""> -->
 
-        <nav>
+        <nav id="navbar">
             <h1>HAIR DAY</h1>
 
             <ul class="ul">
@@ -44,13 +44,26 @@
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Offers</a></li>
             </ul>
+
+            <button class="sidebtn" id="sidebar">
+                <div class="humbar">
+                </div>
+            </button>
+
         </nav>
         <div>
             <h2>Be Diffrent</h2>
             <h3>STYLE<i></i>HAIRDO<i></i>COLORS</h3>
             <p>Since 2004</p>
         </div>
+        <div class="arrow"><i class="fa-solid fa-circle-arrow-up" id="arrobtn"></i></div>
     </header>
+    <div class="mobilenav" id="navv">
+        <a href="#" data-content="home">Home</a>
+        <a href="#aboutus">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Offers</a>
+    </div>
     <main>
         <section class="cardes">
             <div class="frist">
@@ -190,6 +203,7 @@
             </p>
         </section>
     </footer>
+    <script src="HairDay.js"></script>
 </body>
 
 </html>
