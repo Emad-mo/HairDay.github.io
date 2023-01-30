@@ -293,7 +293,7 @@ MAIN .cardes {
     text-align: center;
 }
 
-/* -------------Hair Cut pricing ------------- */
+/* -------------About US ------------- */
 .AboutSec {
     width: 100%;
     height: 100vh;
@@ -365,13 +365,11 @@ MAIN .cardes {
     color: rgb(202, 120, 62);
     background-color: rgb(202, 120, 62);
     transform-origin: bottom left;
-    /* transition: transform 0.3s ease-out; */
+
 }
 
 #aboutus:hover::before {
-    /* color: rgb(202, 120, 62);
-    transform: scaleX(0);
-    transform-origin: bottom right; */
+
     animation: tra 0.5s ease-in;
 }
 
@@ -710,7 +708,7 @@ footer {
         display: block;
         position: relative;
         cursor: pointer;
-        width: 30px;
+        width: 50px;
         /* height: 35px; */
         appearance: none;
         background: none;
@@ -727,18 +725,18 @@ footer {
         content: "";
         display: block;
         width: 100%;
-        height: 2px;
+        height: 5px;
         background-color: white;
         margin: 6px 0px;
         transition: 0.4s;
     }
 
     .sidebtn.is-activ::before {
-        transform: rotate(-45deg) translate(-6px, 2px);
+        transform: rotate(-45deg) translate(-10px, 2px);
     }
 
     .sidebtn.is-activ::after {
-        transform: rotate(45deg) translate(-9px, -5px);
+        transform: rotate(45deg) translate(-12px, -5px);
     }
 
     .sidebtn.is-activ .humbar {
@@ -764,6 +762,7 @@ footer {
         left: 50%;
         backdrop-filter: brightness(20%);
         -webkit-backdrop-filter: brightness(20%);
+        padding-top: 200px;
     }
 
     .mobilenav>a {
@@ -776,7 +775,7 @@ footer {
         position: relative;
         gap: 10px;
         color: rgb(232, 230, 227);
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: 500;
         font-family: 'Montserrat', sans-serif;
 
@@ -818,10 +817,11 @@ footer {
     }
 
     nav>h1 {
-        font-size: 30px;
+        font-size: 35px;
         margin-left: 40px;
 
     }
+
 
     header>div {
         width: 92%;
@@ -842,4 +842,429 @@ footer {
         font-size: 1.5rem;
     }
 
+    MAIN .cardes {
+        display: grid;
+        /* justify-content: ; */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 150vh;
+        background-color: rgb(24, 26, 27);
+        text-align: center;
+        color: white;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .cardes div:nth-child(even) {
+        /* height: 100%; */
+        background-color: rgb(0, 0, 0);
+    }
+
+    .cardes>div {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        transform-origin: right center;
+        /* backface-visibility: hidden; */
+    }
+
+
+    .cardes .front>h2 {
+        width: auto;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bolder;
+        font-size: 5rem;
+        padding-bottom: 30px;
+        color: rgb(202, 120, 62);
+    }
+
+    .cardes .front>h3 {
+        width: 10px;
+        letter-spacing: 2px;
+        width: auto;
+        font-size: 4rem;
+
+
+    }
+
+    .front>p {
+        padding-top: 10px;
+        font-size: 2rem;
+    }
+
+    .front>p>i {
+        height: 10px;
+        width: 10px;
+        margin: 2px;
+        background-color: rgb(202, 120, 62);
+        border-radius: 50%;
+        display: inline-block;
+
+    }
+
+    .cardes .back {
+        background-color: rgb(24, 26, 27);
+        ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        width: 100%;
+        text-align: center;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }
+
+
+    .cardes>div .back>p {
+        padding: 0px 10px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    /* --------------------------------
+    ---------------------------------- */
+    .AboutSec {
+        width: 100%;
+        height: 110vh;
+        background-color: black;
+        color: white;
+        background-image: url(aboutback.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .AboutSec>div {
+        width: 100%;
+        height: 120vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 70%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0%;
+
+    }
+
+
+    .about {
+        position: relative;
+        top: -10%;
+        width: 95%;
+        height: 30vh;
+        /* border: 2px white solid; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about>h1 {
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        font-size: 5rem;
+        color: rgb(202, 120, 62);
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .about>p {
+        width: 70%;
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500;
+        backdrop-filter: brightness(50%);
+        -webkit-backdrop-filter: brightness(50%);
+    }
+
+    .about>a {
+        position: relative;
+        padding-top: 50px;
+        text-decoration: none;
+        color: rgb(202, 120, 62);
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .aboutimages {
+        /* overflow: hidden; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        /* margin-right: 70px; */
+        margin-top: 0px;
+    }
+
+    #aboutimgone {
+        position: relative;
+        z-index: 2;
+        left: 10%;
+        bottom: 400px;
+
+
+    }
+
+    #aboutimgtwo {
+        z-index: 4;
+        position: relative;
+        left: -30%;
+        /* margin-top: 200px; */
+    }
+
+    /* -----------------------------------------
+    ----------------prices list mobile----------
+    -------------------------------------------- */
+    .prices {
+        width: 100%;
+        height: 55vh;
+        background-color: rgb(28, 30, 31);
+        color: rgb(232, 230, 227);
+    }
+
+    .letsdotit {
+        overflow: hidden;
+        width: 70%;
+        position: relative;
+        font-size: 8em;
+        top: 80px;
+        left: 50px;
+        z-index: 0;
+        color: rgb(202, 120, 62);
+        opacity: 0.1;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .priceslist {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 0px;
+        margin-bottom: 50px;
+    }
+
+    .priceslist>h1 {
+        justify-self: flex-end;
+        text-align: center;
+        display: block;
+        position: relative;
+        left: 65%;
+        width: 15%;
+        height: 5vh;
+        font-size: 45px;
+        font-weight: bolder;
+        padding-bottom: 30px;
+
+    }
+
+    .priceslist>ul>li {
+        padding-left: 0px;
+        display: grid;
+        grid-template-columns: 1.6fr 1fr 0.4fr;
+        margin-left: 30px;
+        justify-content: center;
+    }
+
+    .priceslist>ul>li>div>p {
+        padding-top: 10px;
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+
+    .priceslist>ul>li>div>h3 {
+        padding-top: 20px;
+        font-size: 2.5em;
+    }
+
+    .priceslist>ul>li>i {
+        position: relative;
+        width: 90%;
+        height: 2px;
+        color: white;
+        margin-left: 0px;
+        background-color: white;
+        top: 40px;
+        opacity: 0.1;
+    }
+
+    .priceslist>ul>li>p {
+        font-size: 2rem;
+        position: relative;
+        top: 20px;
+    }
+
+    /* -----------------footer-----------------------
+------------------------------------------------- */
+    footer {
+        width: 100%;
+    }
+
+    .detials {
+        width: 100%;
+        height: 90vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo {
+        /* padding-left: 50px; */
+        color: rgb(202, 120, 62);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50px;
+        animation: logofooter 5s ease-in-out;
+        animation-iteration-count: infinite;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .logo::after {
+        position: absolute;
+        content: "";
+        width: 450px;
+        background-color: white;
+        height: 2px;
+        top: 310px;
+        left: 22px;
+
+    }
+
+    @keyframes logofooter {
+        50% {
+            transform: translate(2px, 20px);
+        }
+    }
+
+    .logo>h1 {
+        width: 100%;
+        font-size: 18rem;
+    }
+
+    .logo>p {
+        font-size: 2.8rem;
+        font-weight: 400;
+        transform: rotate(90deg);
+        padding: 0px;
+        margin: 0px;
+        width: 120%;
+        height: 100%;
+        position: relative;
+        left: -100px;
+    }
+
+    .logo :last-child {
+        position: relative;
+        right: 200px;
+        /* font-size:500px ; */
+    }
+
+    .contact {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+
+    .contact>h3 {
+        padding-bottom: 10px;
+        font-size: 5rem;
+        font-weight: 700;
+        width: 100%;
+        margin-right: 0px;
+        position: relative;
+
+
+    }
+
+    .contact>p {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 3px;
+        font-size: 2rem;
+        font-weight: 100;
+    }
+
+    .contact>div {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        padding-left: 0px;
+
+    }
+
+    .contact>div>a {
+        /* padding-left: 5px; */
+        color: aliceblue;
+        font-size: 2.5rem;
+
+    }
+
+    .footerimg {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footerimg>img {
+        /* padding: 10px 10px; */
+        width: 70%;
+    }
+
+    .footerimg>h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 50px;
+        font-size: 5rem;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    .footercopy {
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(28, 30, 31);
+        color: rgb(232, 230, 227);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footercopy>p {
+        font-size: 2rem;
+        font-weight: 200;
+
+    }
+
+    #arrobtn {
+        display: none;
+        position: fixed;
+        font-size: 7rem;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px rgb(202, 120, 62);
+        bottom: 5%;
+        right: 5%;
+        z-index: 10;
+        cursor: pointer;
+    }
 }
